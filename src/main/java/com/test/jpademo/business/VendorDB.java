@@ -4,13 +4,13 @@ import javax.persistence.EntityManager;
 
 import com.test.jpademo.db.DBUtil;
 
-public class UserDB {
-	public static User getUserById(int userID) {
+public class VendorDB {
+	public static Vendor getVendorById(int vendorID) {
 		EntityManager em = DBUtil.getEmFactory().createEntityManager();
 		try {
-			User user = em.find(User.class, userID);
+			Vendor vendor = em.find(Vendor.class, vendorID);
 			
-			return user;
+			return vendor;
 		}
 		finally {
 			em.close();

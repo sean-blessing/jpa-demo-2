@@ -3,6 +3,7 @@
 	<persistence-unit name="prsConsoleJPA">
 	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 	    <class>com.test.jpademo.business.User</class>
+	    <class>com.test.jpademo.business.Vendor</class>
 	    <!-- Add all other entities here... Vendor, Product, PurchaseRequest, PurchaseRequestLineItem -->
 	    <exclude-unlisted-classes>false</exclude-unlisted-classes>
 	    <properties>
