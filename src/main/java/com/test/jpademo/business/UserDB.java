@@ -1,6 +1,10 @@
 package com.test.jpademo.business;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import com.test.jpademo.db.DBUtil;
 
@@ -17,5 +21,20 @@ public class UserDB {
 			//DBUtil.closeEMF();
 		}
 		
+	}
+
+	public static List<User> getAll() {
+		EntityManager em = DBUtil.getEmFactory().createEntityManager();
+		List<User> users = new ArrayList<>();
+		try {
+			Query q = em.createQuery("SELECT u FROM User u");
+			users = q.getResultList();
+			
+		}
+		finally {
+			em.close();
+			//DBUtil.closeEMF();
+		}
+		return users;
 	}
 }

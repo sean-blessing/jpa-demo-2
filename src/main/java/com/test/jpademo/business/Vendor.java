@@ -17,7 +17,7 @@ public class Vendor {
 	private String city;
 	private String state;
 	private String zip;
-	private String phone;
+	private String phoneNumber;
 	private String email;
 	@Column(name="isPreApproved")
 	private boolean preApproved;
@@ -36,7 +36,7 @@ public class Vendor {
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
-		this.phone = phone;
+		this.phoneNumber = phone;
 		this.email = email;
 		this.preApproved = preApproved;
 	}
@@ -50,7 +50,7 @@ public class Vendor {
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
-		this.phone = phone;
+		this.phoneNumber = phone;
 		this.email = email;
 		this.preApproved = preApproved;
 	}
@@ -111,12 +111,12 @@ public class Vendor {
 		this.zip = zip;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setPhoneNumber(String phone) {
+		this.phoneNumber = phone;
 	}
 
 	public String getEmail() {
@@ -138,7 +138,7 @@ public class Vendor {
 	@Override
 	public String toString() {
 		return "Vendor [id=" + id + ", code=" + code + ", name=" + name + ", address=" + address + ", city=" + city
-				+ ", state=" + state + ", zip=" + zip + ", phone=" + phone + ", email=" + email + ", preApproved="
+				+ ", state=" + state + ", zip=" + zip + ", phone=" + phoneNumber + ", email=" + email + ", preApproved="
 				+ preApproved + "]";
 	}
 	
